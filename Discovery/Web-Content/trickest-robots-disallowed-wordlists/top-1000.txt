@@ -998,7 +998,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /chapter-ag-pdf
 /chapter-ag-pdf/*
 /chat/
-/chatgpt-26
 /chats/
 /checkin
 /checkout
@@ -1208,8 +1207,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /ecomm
 /edit
 /edit$
-/edit$
-/edit/$
 /edit/change-email
 /edit/change-password
 /edited
@@ -1412,6 +1409,7 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /full-commit
 /full_screen_preview
 /fullscreen-page
+/futures
 /g00
 /galaxy-s10-buy-test
 /gallery.js
@@ -1446,7 +1444,7 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /goldlog$
 /group
 /group/
-/gtc/gtc-chatbot/*http://nypost.com/robots.txt
+/gtc/gtc-chatbot/*http://nymag.com/robots.txt
 /hack
 /hardware/*/cart
 /havadurumu/
@@ -1743,7 +1741,7 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /newsletter
 /nextpodcastlist/*
 /nightly-news
-/no-referrer-when-downgradehttp://globesimregistrations.ph/robots.txt
+/no-referrer-when-downgradehttp://globalnews.ca/robots.txt
 /no-search-results
 /node
 /node/add
@@ -2282,6 +2280,7 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /test-template
 /testhome
 /testing-products-
+/text
 /thank-you
 /the-hustle/author/*&
 /the-hustle/author/*?
@@ -2314,6 +2313,7 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /topics
 /topics/*?
 /topics_amp/*
+/topline
 /townhome_att
 /tpoint_articleshow/*
 /trackClickAsync.htm
@@ -5435,7 +5435,7 @@ apdata
 api
 api*.do
 api*?hl=
-api*?hl=http://aesthetics.fandom.com/robots.txt
+api*?hl=http://adssettings.google.com/robots.txt
 api-keys
 api-proxy
 api-web
@@ -5469,6 +5469,7 @@ api/getrecjobs
 api/graphql
 api/historical
 api/html
+api/http://creativecommons.org/robots.txt
 api/internal/*/location
 api/jobPostings/jobs
 api/maps/
@@ -6366,7 +6367,7 @@ blog/*?text=
 blog/*sitemap.xml$
 blog/*utm_source=
 blog/.
-blog/.html.*http://s3.amazonaws.com/robots.txt
+blog/.html.*http://safety.google/robots.txt
 blog/10-lessons-from-an-engineering-manager/$
 blog/2025-shifting-roles-report/$
 blog/23-prototyping-resources-to-bookmark-right-now/$
@@ -7983,7 +7984,7 @@ cdn-cgi
 cdn-cgi/
 cdn-cgi/bm/cv
 cdn-cgi/challenge-platform
-cdn-cgi/http://meetup.com/robots.txt
+cdn-cgi/http://material.io/robots.txt
 cdn-cgi/images/trace
 cdn-cgi/l/email-protection
 cdn-cgi/rum
@@ -8019,7 +8020,7 @@ cgi-bin/koha/
 cgi-bin/loginpage
 cgi-bin/search.fpl
 cgi-bin/wx
-cgi-binhttp://iheart.com/robots.txt
+cgi-binhttp://ifttt.com/robots.txt
 cgi-local
 cgi-mad/
 cgi-pct/
@@ -8138,7 +8139,6 @@ chat-completions
 chat/
 chat/api/livechat
 chat/finance
-chatgpt-26
 chats/
 check
 checkForm=
@@ -8911,7 +8911,7 @@ confirm_unsubscribe
 conflagexp
 connect
 connect/@
-connect/http://blog.youtube/robots.txt
+connect/http://blog.twitter.com/robots.txt
 connect/invite
 connect/social-intranet.html
 connections
@@ -9060,7 +9060,7 @@ content/search
 content/telegraph
 content/temp/*
 content/websites/languages
-content/websites/us/en/noindex/*http://xcelab.net/robots.txt
+content/websites/us/en/noindex/*http://x.com/robots.txt
 content_reporting
 content_title=
 contest
@@ -9955,6 +9955,7 @@ de-de/resource-library/arten-von-flow-diagrammen/$
 de-de/resource-library/benutzer-flow/$
 de-de/resource-library/beste-schriftarten-fuer-websites/$
 de-de/resource-library/beste-schriften-fuer-logos/$
+de-de/resource-library/broschuerenbeispiele/$
 de-de/resource-library/daily-stand-up/$
 de-de/resource-library/design-lessons/$
 de-de/resource-library/die-besten-schriftarten-fuer-thumbnails/$
@@ -10859,9 +10860,7 @@ economia/pt-br/internet
 edc
 edcom/bugtrack
 edit
-edit$
 edit-subscriptions
-edit/$
 edit/review
 edit/success
 editProfile
@@ -12183,6 +12182,7 @@ es-es/resource-library/como-disenar-un-logotipo/$
 es-es/resource-library/como-disenar-una-aplicacion/$
 es-es/resource-library/diagramas-de-alineacion-explicados/$
 es-es/resource-library/diferencia-entre-ui-y-ux/$
+es-es/resource-library/ejemplos-de-folletos/$
 es-es/resource-library/ejemplos-de-mapas-mentales/$
 es-es/resource-library/ejemplos-de-presentaciones/$
 es-es/resource-library/ejemplos-sitios-portfolio/$
@@ -12592,6 +12592,7 @@ es-la/resource-library/como-hacer-mapa-mental/$
 es-la/resource-library/descripcion-del-problema/$
 es-la/resource-library/diagramas-de-alineacion-explicados/$
 es-la/resource-library/diferencia-entre-ui-y-ux/$
+es-la/resource-library/ejemplos-de-folletos/$
 es-la/resource-library/ejemplos-de-mapas-mentales/$
 es-la/resource-library/ejemplos-de-presentaciones/$
 es-la/resource-library/ejemplos-sitios-portafolio/$
@@ -13250,7 +13251,7 @@ fastanswers
 fatalerror.html
 faves-i_love_u_get_away_from_me
 favicon.ico
-favicon.icohttp://blog.cloudflare.com/robots.txt
+favicon.icohttp://blog.google/robots.txt
 favorit-hinzufuegen
 favorit-loeschen
 favorites?
@@ -13288,6 +13289,7 @@ features/for-
 features/index2
 federal/events/earthobservationday2015/
 federal/events/earthobservationday2015/ConfirmationPage/
+fedsearch
 feed
 feed$
 feed.mhtml
@@ -13401,6 +13403,7 @@ fi/search/
 fi/search/default.mi
 fiats
 ficapp
+ficmanagers
 field_article
 fifty-shades-darker
 fifty-shades-freed
@@ -16341,6 +16344,7 @@ fur/firefox/collections/mozilla
 fur/firefox/collections/mozilla/$
 fur/firefox/search
 fusion-search
+futures
 fy-NL/android/collections
 fy-NL/android/search
 fy-NL/firefox/collections
@@ -16350,7 +16354,7 @@ fy-NL/firefox/collections/mozilla
 fy-NL/firefox/collections/mozilla/$
 fy-NL/firefox/search
 g
-g/4arE9Chttp://flickr.com/robots.txt
+g/4arE9Chttp://flipboard.com/robots.txt
 g/api
 ga-actions/formie/forms/refresh-tokens
 ga/p
@@ -16931,10 +16935,12 @@ highereducation/my-account
 highlights
 hinweis/datenleck
 hire/*?*isid=
+hire/ats-partners
 hire/browse
 hire/how-to-hire
 hire/interview-questions
 hire/job-description
+hire/o/ats-partners
 history
 history
 history.naver
@@ -17153,47 +17159,48 @@ html/story
 html5
 http
 http2_data
-http://161.ru/robots.txt
-http://alexa.com/robots.txt
+http://4.bp.blogspot.com/robots.txt
+http://akparti.org.tr/robots.txt
 http://aliexpress.com/robots.txt
-http://alltop.com/robots.txt
+http://amazon.co.jp/robots.txt
+http://amazon.co.uk/robots.txt
 http://amazon.com/robots.txt
 http://amazon.de/robots.txt
 http://amazon.es/robots.txt
+http://amazon.fr/robots.txt
 http://amazon.in/robots.txt
 http://amazon.it/robots.txt
 http://ameblo.jp/robots.txt
-http://amzn.to/robots.txt
-http://apache.org/robots.txt
 http://apple.com/robots.txt
 http://economist.com/robots.txt
-http://en.wikipedia.org/robots.txt
-http://gist.github.com/robots.txt
-http://govostis.gr/robots.txt
+http://en.m.wikipedia.org/robots.txt
+http://gettyimages.com/robots.txt
+http://gravatar.com/robots.txt
 http://groupon.com/robots.txt
 http://healthline.com/robots.txt
 http://img.youtube.com/robots.txt
 http://irishtimes.com/robots.txt
-http://kickstarter.com/robots.txt
-http://namecheap.com/robots.txt
-http://newsweek.com/robots.txt
+http://kinopoisk.ru/robots.txt
+http://nationalgeographic.com/robots.txt
+http://nhs.uk/robots.txt
+http://nypost.com/robots.txt
 http://patents.google.com/robots.txt
-http://pinterest.com/robots.txt
-http://python.org/robots.txt
+http://pixiv.net/robots.txt
+http://qualtrics.com/robots.txt
 http://seekingalpha.com/robots.txt
-http://sites.google.com/robots.txt
+http://siteground.com/robots.txt
 http://smithsonianmag.com/robots.txt
 http://static.wixstatic.com/robots.txt
-http://techradar.com/robots.txt
+http://telegraph.co.uk/robots.txt
 http://thelancet.com/robots.txt
-http://tiktok.com/robots.txt
-http://tools.google.com/robots.txt
+http://threads.net/robots.txt
+http://tracks.arte.tv/robots.txt
 http://upload.wikimedia.org/robots.txt
 http://use.fontawesome.com/robots.txt
 http://vox.com/robots.txt
-http://w3techs.com/robots.txt
-http://weebly.com/robots.txt
-http://wix.com/robots.txt
+http://wa.me/robots.txt
+http://weforum.org/robots.txt
+http://wish.com/robots.txt
 https://player.cnevids.com
 https://www.iubenda.com/en/help/126238-pricing-faqs-legacy-guide
 https://www.iubenda.com/en/help/142642-old-vs-new-pricing
@@ -17881,7 +17888,7 @@ integrations/facebook/glassdoor/eep
 intelligencer/amp
 intent
 interactive
-interactive*http://fda.gov/robots.txt
+interactive*http://feedly.com/robots.txt
 interactive/reading-preference
 interactives/sponsor-story
 intern
@@ -18092,6 +18099,7 @@ it-it/resource-library/come-progettare-un-logo/$
 it-it/resource-library/cos-e-il-wireframing/$
 it-it/resource-library/definizione-del-problema/$
 it-it/resource-library/differenza-tra-ui-e-ux/$
+it-it/resource-library/esempi-di-brochure/$
 it-it/resource-library/esempi-di-mappe-mentali/$
 it-it/resource-library/esempi-di-pitch-deck/$
 it-it/resource-library/esempi-siti-portfolio/$
@@ -18676,6 +18684,7 @@ ja-jp/resource-library/alignment-charts-explained/$
 ja-jp/resource-library/best-fonts-for-logos/$
 ja-jp/resource-library/best-fonts-for-thumbnails/$
 ja-jp/resource-library/best-fonts-for-websites/$
+ja-jp/resource-library/brochure-examples/$
 ja-jp/resource-library/color-combinations/$
 ja-jp/resource-library/design-lessons/$
 ja-jp/resource-library/difference-between-ui-and-ux/$
@@ -19333,6 +19342,7 @@ ko-kr/resource-library/alignment-charts-explained/$
 ko-kr/resource-library/best-fonts-for-logos/$
 ko-kr/resource-library/best-fonts-for-thumbnails/$
 ko-kr/resource-library/best-fonts-for-websites/$
+ko-kr/resource-library/brochure-examples/$
 ko-kr/resource-library/color-combinations/$
 ko-kr/resource-library/difference-between-ui-and-ux/$
 ko-kr/resource-library/facebook-size-guide/$
@@ -19813,6 +19823,7 @@ load_video_player
 loader.cfm
 loader.cfm*
 loans
+loc/volunteers
 loc=
 local
 local
@@ -20521,7 +20532,7 @@ mre/*.jpg$
 mre/*.js$
 mre/*.pdf$
 mre/*.png$
-mre/*.zip$http://gov.uk/robots.txt
+mre/*.zip$http://gopro.com/robots.txt
 mre/*?
 mre/*@@configuracoes_view
 mre/*@@download/file$
@@ -20695,6 +20706,7 @@ myjs
 mylibrary
 mylibrary$
 mylibrary?
+myloc
 mymodule/tag
 mymodule/vehicle-sub-model-year-tag
 mymodule/vehicle-sub-model-year-tag-trim/compare
@@ -20734,6 +20746,7 @@ narbiomap/
 narrative-
 nasjournals/
 nasw/
+nationalfilmregistry
 native
 native-android-mobile
 native-android-tablet
@@ -21041,6 +21054,7 @@ nl-nl/resource-library/$
 nl-nl/resource-library/beste-lettertypen-voor-logos/$
 nl-nl/resource-library/beste-lettertypen-voor-thumbnails/$
 nl-nl/resource-library/beste-lettertypen-voor-websites/$
+nl-nl/resource-library/brochurevoorbeelden/$
 nl-nl/resource-library/gebruikersstroom/$
 nl-nl/resource-library/hoe-maak-je-een-mindmap/$
 nl-nl/resource-library/hoe-ontwerp-je-een-app/$
@@ -21635,7 +21649,7 @@ p/*/v/*$
 p/*/v/*?
 p/*/victory$
 p/*/victory?
-p/*http://socialimpact.youtube.com/robots.txt
+p/*http://smh.com.au/robots.txt
 p/*surveyopen
 p/*thm=
 p/60
@@ -22156,6 +22170,8 @@ phvw-vp
 piano
 pickadate/static-1.6
 picture-gallery/sponsor-story
+pictures/related
+pictures/search
 pigeon
 pill-identification/search-results*
 pimages
@@ -22276,6 +22292,7 @@ pl-pl/resource-library/nowoczesne-czcionki/$
 pl-pl/resource-library/opis-problemu/$
 pl-pl/resource-library/pomysly-na-projektowanie-ukladu-strony-internetowej/$
 pl-pl/resource-library/przeplyw-uzytkownika/$
+pl-pl/resource-library/przyklady-broszur/$
 pl-pl/resource-library/przyklady-map-mysli/$
 pl-pl/resource-library/przyklady-prezentacji-oferty/$
 pl-pl/resource-library/rodzaje-schematow-blokowych/$
@@ -22592,6 +22609,7 @@ prequalify
 present
 presentation
 presentation-maker/$
+preserv/extranet
 press
 press$
 press-coverage/?offset=
@@ -22608,7 +22626,6 @@ preview/result?
 preview=
 preview=
 preview=true
-preview?*
 preview_script_id
 preview_theme_id
 previewtemplate
@@ -22713,7 +22730,7 @@ product-integrations/figma-for-microsoft-teams/$
 product-integrations/google-workspace/$
 product-integrations/zoom/$
 product-managers/$
-product-ratings/http://wired.com/robots.txt
+product-ratings/http://wix.com/robots.txt
 product-reviews/B0069IY63Y
 product/*
 product/electrode/api/logger
@@ -23246,6 +23263,7 @@ pt-br/resource-library/como-fazer-mapa-mental/$
 pt-br/resource-library/declaracao-de-problema/$
 pt-br/resource-library/diferenca-entre-ui-e-ux/$
 pt-br/resource-library/exemplos-de-apresentacoes/$
+pt-br/resource-library/exemplos-de-folhetos/$
 pt-br/resource-library/exemplos-de-mapas-mentais/$
 pt-br/resource-library/exemplos-sites-portfolio/$
 pt-br/resource-library/facebook-size-guide/$
@@ -23743,6 +23761,8 @@ relation
 relation=
 release-notes/$
 releasenotes/item/
+religious-landscape-study/*.md
+religious-landscape-study/*/markdown
 relnotes
 remember-the-titans
 remote-login.php
@@ -24154,8 +24174,10 @@ resource-library/agile-and-waterfall-methodologies/$
 resource-library/ai-app-builders/$
 resource-library/ai-coding-tools/$
 resource-library/ai-design-tools/$
+resource-library/ai-for-ab-testing-tools/$
 resource-library/ai-for-product-design/$
 resource-library/ai-for-product-managers/$
+resource-library/ai-in-design/$
 resource-library/ai-market-research-tools/$
 resource-library/ai-product-design/$
 resource-library/ai-projects-for-college-students/$
@@ -24252,6 +24274,7 @@ resource-library/icebreaker-ideas/$
 resource-library/infographic-examples/$
 resource-library/instagram-ad-examples/$
 resource-library/instagram-photo-size/$
+resource-library/instagram-post-ideas/$
 resource-library/instagram-story-ideas/$
 resource-library/interaction-design/$
 resource-library/k-12-design-basics/$
@@ -24279,6 +24302,7 @@ resource-library/pinterest-image-sizes/$
 resource-library/pitch-deck-examples/$
 resource-library/portfolio-website-examples/$
 resource-library/presentation-ideas/$
+resource-library/pricing-page-best-practices/$
 resource-library/print-design/$
 resource-library/problem-statement/$
 resource-library/product-development-process/$
@@ -24546,6 +24570,7 @@ rpc
 rpc/index.php?mode=profile_module_illusts&user_id=*&illust_id=
 rpk/artist_stats
 rpk/played_song
+rr/mopic/staff
 rs
 rs=
 rsidxfeed
@@ -25154,7 +25179,6 @@ search_rss$
 search_suggest
 searchdeb/
 searches
-searchhttp://crunchbase.com/robots.txt
 searchresults
 searchresults.aspx
 searchsuggest
@@ -25550,6 +25574,7 @@ sitemap/rss
 sitemaps
 sitemaps/
 sitemaps/*?page=
+sitemaps_xml_files
 siteminderagent
 siteopt.js
 sites
@@ -26258,6 +26283,7 @@ sports/includes
 sports/nfl/includes
 sports/services/photos
 sports/whatson
+sports/world-cup/fifa-world-cup-2026-bracket-challenge
 sports_fp_ms
 spot
 spots_shown=
@@ -26817,7 +26843,7 @@ tag
 tag-manager
 tag-manager-360
 tag/
-tag/*+http://digital-strategy.ec.europa.eu/robots.txt
+tag/*+http://discogs.com/robots.txt
 tag/*/page
 tag/credible
 tag/interaction-card
@@ -27332,7 +27358,7 @@ test/diagnostic-tool
 test_community
 testfl
 testgpr
-testhttp://moskva.stroi-podryad.ru/robots.txt
+testhttp://moz.com/robots.txt
 testing
 testpage-forhomepage
 tests
@@ -28488,7 +28514,7 @@ uxtest/ux/
 uy
 uy/es/ServicesLandingPage/AdvisoryLanding/RPA/Robotic_Process%20Automation_insert.pdf
 uy/help
-uz/http://billboard.com/robots.txt
+uz/http://beppegrillo.it/robots.txt
 v
 v$
 v/badge
@@ -28843,6 +28869,7 @@ web/portal/software/websphere
 web/solutions/
 web/telepresence/pro/
 web/upov
+web_arch
 webapp
 webapps/aries
 webapps/checkout
@@ -29499,9 +29526,9 @@ wiki/Wikipedia_discusión:Solicitudes_de_verificación_de_usuarios
 wiki/Wikipedia_discusión:Supresores/Candidaturas
 wiki/Wikipedia_talk%3AAbuse_reports
 wiki/Wikipedia_talk%3AAbuse_response
-wiki/Wikipedia_talk%3AAdministrator_electionshttp://en.m.wikipedia.org/robots.txt
+wiki/Wikipedia_talk%3AAdministrator_electionshttp://en.wikipedia.org/robots.txt
 wiki/Wikipedia_talk%3AAdministrator_electionshttp://engadget.com/robots.txt
-wiki/Wikipedia_talk%3AAdministrator_electionshttp://windows.microsoft.com/robots.txt
+wiki/Wikipedia_talk%3AAdministrator_electionshttp://wikihow.com/robots.txt
 wiki/Wikipedia_talk%3AAdministrator_recall
 wiki/Wikipedia_talk%3AAdministrator_review
 wiki/Wikipedia_talk%3AAdministrators%27_noticeboard
@@ -29801,8 +29828,7 @@ wp-admin
 wp-admin/
 wp-admin/admin-ajax.php
 wp-admin/admin-ajax.php
-wp-admin/admin-ajax.phphttp://rumble.com/robots.txt
-wp-admin/admin-ajax.phphttp://starbucks.com/robots.txt
+wp-admin/admin-ajax.phphttp://state.gov/robots.txt
 wp-admin/load-scripts.php
 wp-admin/load-styles.php
 wp-adv
@@ -29946,7 +29972,7 @@ year
 your
 your-shop
 youreurope/businessACC
-youreurope/businessDEV/http://eventbrite.co.uk/robots.txt
+youreurope/businessDEV/http://europarl.europa.eu/robots.txt
 youreurope/citizensACC
 youreurope/citizensDEV
 yourtake
@@ -30254,7 +30280,7 @@ zz-test
 404
 404
 404.html
-413gkwMT/http://sgtrains.com/robots.txt
+413gkwMT/http://sexlive.ltd/robots.txt
 429.html
 500
 500
