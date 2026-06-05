@@ -224,7 +224,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /_/rsrc
 /_widget
 /album/*/*?i=
-/analytics
 /api
 /api$
 /api?
@@ -265,8 +264,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 /events/rss
 /events/xml
 /feedarticle
-/followers
-/following
 /format:thumbnail
 /forum-attachment
 /gcrnsts
@@ -531,8 +528,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 ?keepEmbedCode=
 ?keyboard=
 ?keywords=
-?lang=
-?lang=en-ss
 ?list=wall
 ?location=
 ?ls=
@@ -552,7 +547,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 ?pt1=true$
 ?radius=
 ?reactions_opened
-?ref_src=
 ?reply=
 ?returnPage=
 ?s=
@@ -566,7 +560,6 @@ $rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService
 ?source=
 ?state=
 ?success=
-?t=
 ?tab=achievements&achievement=
 ?utf8=
 ?utm_*=
@@ -611,7 +604,6 @@ PWD
 Present
 Proxy.ashx
 README.txt
-REST/auth/CSRFTicket
 ReportBug
 SAGE
 SNP
@@ -646,11 +638,6 @@ WebObjects/MZFinance.woa
 WebObjects/MZPersonalizer.woa
 WebObjects/MZStore.woa/wa/viewMultiRoom?
 WebObjects/MZStoreElements.woa
-[_0-9a-zA-Z]+/likes
-[_0-9a-zA-Z]+/media
-[_0-9a-zA-Z]+/photo
-[_0-9a-zA-Z]+/status/[0-9]+/likes
-[_0-9a-zA-Z]+/status/[0-9]+/retweets
 _
 _/aihub_pod
 _/ain/_/js
@@ -702,7 +689,6 @@ _borders
 _derived
 _email.html
 _fpclass
-_generated
 _global_notifications
 _jsn.json
 _jsnp.js
@@ -726,7 +712,6 @@ _nitf.xml
 _overlay
 _print.html
 _private
-_private/admin-tools
 _prq
 _qa.html
 _query=
@@ -771,7 +756,6 @@ accessibility-statement
 account
 account-login
 account/
-account/deactivated
 accounts/ClientAuth
 accounts/ClientAuth
 accounts/ClientLogin
@@ -979,8 +963,6 @@ backstage/bbc-login-help
 backstage/bbc-login-help$
 badges/profile/create
 bandito
-bePatron
-bePatronDone
 best-countries-for-business/list
 beta
 bfe/apps/website
@@ -1047,8 +1029,8 @@ books?*zoom=5
 boutique/sitemaps
 bricks/image
 business
-business/*&categories=
-business/*?categories=
+business/*&categories
+business/*?categories
 business/blahblah
 business/learning/blog
 business/pos-system/shop
@@ -1079,7 +1061,6 @@ celebritycruises/guide-to-the-globe
 cgi-bin
 cgibin
 chat
-checkout
 checkout-external
 checkoutnow
 checkpoint
@@ -1160,7 +1141,6 @@ core/*.js$
 core/*.js?
 core/*.png
 core/*.svg
-corgi$
 couchmode
 coupons/visit
 covid19/mobility
@@ -1660,7 +1640,6 @@ guest-star
 guidebooks
 gview
 h5games_gamecenter/images
-hashtag/*?src=
 hd
 header/channels
 headline.txt
@@ -1697,17 +1676,15 @@ hp/video
 hpc/*/supported-applications.aspx?
 hpm
 hpmob
-http://patreon.com/robots.txt
-http://theguardian.com/robots.txt
-http://wa.me/robots.txt
-http://web.archive.org/robots.txt
+http://amazon.de/robots.txt
+http://mail.google.com/robots.txt
+http://ncbi.nlm.nih.gov/robots.txt
+http://npr.org/robots.txt
 hub?category=
 hz/contact-us/ajax/initiate-trusted-contact
 hz/help/contact/*/message/$
 hz/leaderboard/hall-of-fame
 hz/leaderboard/top-reviewers
-i/api
-i/u
 icdp
 icons
 identity/accountsettingsactivityweb
@@ -2037,7 +2014,6 @@ musicl
 musics
 musicstore/download
 musicstore/preview
-mwebWindowDone
 mwlite
 my_account
 my_favorites
@@ -2122,7 +2098,6 @@ patents/download
 patents/pdf
 patents/related
 patents?
-patronNext
 pay
 pay/images/merchant_logos
 pay/images/program_logos
@@ -2211,7 +2186,6 @@ pro
 proFile/history?
 product-reviews/B0069IY63Y
 product/reviews?
-productPurchaseDone
 product_
 production-monitoring
 products;
@@ -2357,7 +2331,6 @@ search*sort=
 search-ar-dev
 search-console/scfe
 search/
-search/*/grid
 search/?
 search/?term=
 search/about
@@ -2365,15 +2338,12 @@ search/advanced
 search/default.aspx?*
 search/howsearchworks
 search/live?
-search/realtime
 search/user?q=
-search/users
 search/video?
 search?
 search?*tbm=map
 search?q$
 search?q=
-search?q=%23
 search\?
 search_history
 sections
@@ -2387,7 +2357,6 @@ services/oauth
 setprefs
 settings
 settings
-settings/deactivated
 settings/loid-email-unsubscribe
 settings/loid-email-unsubscribe-router
 setup_organization=
@@ -3004,7 +2973,6 @@ upload
 urchin_test
 url
 user
-user.php
 user/account-recovery
 user/login
 user/logout
@@ -3013,7 +2981,6 @@ user/password
 user/password-reset
 user/register
 user/verify
-userNext
 userinfo
 users
 using
@@ -3284,7 +3251,7 @@ wiki/Wikipedia%3AVandalismi_in_corso
 wiki/Wikipedia%3AVandalismusmeldung
 wiki/Wikipedia%3AVandalismusmeldung%2F
 wiki/Wikipedia%3AVermittlungsausschuss
-wiki/Wikipedia%3AVermittlungsausschuss%2Fhttp://bbc.com/robots.txt
+wiki/Wikipedia%3AVermittlungsausschuss%2Fhttp://amazon.com/robots.txt
 wiki/Wikipedia%3AVotes_for_deletion
 wiki/Wikipedia%3AWikiProject_Deletion_sorting
 wiki/Wikipedia%3AWikiProject_Spam
@@ -3453,7 +3420,7 @@ wiki/Wikipedia_Diskussion:Checkuser%2F
 wiki/Wikipedia_Diskussion:Spam-Blacklist-Log
 wiki/Wikipedia_talk%3AAbuse_reports
 wiki/Wikipedia_talk%3AAbuse_response
-wiki/Wikipedia_talk%3AAdministrator_electionshttp://docs.google.com/robots.txt
+wiki/Wikipedia_talk%3AAdministrator_electionshttp://creativecommons.org/robots.txt
 wiki/Wikipedia_talk%3AAdministrator_recall
 wiki/Wikipedia_talk%3AAdministrator_review
 wiki/Wikipedia_talk%3AAdministrators%27_noticeboard
