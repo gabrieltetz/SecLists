@@ -108,13 +108,14 @@ resources/assets/js/signature_pad.js
 resources/assets/js/FileSaver.min.js
 resources/assets/js/bootstrap-table-reorder-columns.js
 resources/views/reports/unaccepted_assets.blade.php
+resources/views/reports/custom/asset.blade.php
+resources/views/reports/custom/component.blade.php
 resources/views/reports/audit.blade.php
 resources/views/reports/activity.blade.php
 resources/views/reports/asset.blade.php
 resources/views/reports/depreciation.blade.php
 resources/views/reports/index.blade.php
 resources/views/reports/maintenances.blade.php
-resources/views/reports/custom.blade.php
 resources/views/reports/accessories.blade.php
 resources/views/reports/licenses.blade.php
 resources/views/models/edit.blade.php
@@ -191,6 +192,7 @@ resources/views/blade/tabs/nav-item.blade.php
 resources/views/blade/tabs/accessory-tab.blade.php
 resources/views/blade/tabs/model-files-tab.blade.php
 resources/views/blade/tabs/upload-tab.blade.php
+resources/views/blade/tabs/company-tab.blade.php
 resources/views/blade/tabs/details-tab.blade.php
 resources/views/blade/tabs/asset-rtd-tab.blade.php
 resources/views/blade/tabs/note-tab.blade.php
@@ -203,6 +205,7 @@ resources/views/blade/tabs/consumable-tab.blade.php
 resources/views/blade/alert-menu.blade.php
 resources/views/blade/table/files.blade.php
 resources/views/blade/table/bulk-assets.blade.php
+resources/views/blade/table/companies.blade.php
 resources/views/blade/table/history.blade.php
 resources/views/blade/table/components.blade.php
 resources/views/blade/table/consumables.blade.php
@@ -210,6 +213,7 @@ resources/views/blade/table/users.blade.php
 resources/views/blade/table/bulk-actions.blade.php
 resources/views/blade/table/index.blade.php
 resources/views/blade/table/assets.blade.php
+resources/views/blade/table/maintenances.blade.php
 resources/views/blade/table/bulk-models.blade.php
 resources/views/blade/table/locations.blade.php
 resources/views/blade/table/bulk-users.blade.php
@@ -423,6 +427,7 @@ resources/views/notifications.blade.php
 resources/views/livewire/admin-personal-access-tokens.blade.php
 resources/views/livewire/slack-settings-form.blade.php
 resources/views/livewire/importer.blade.php
+resources/views/livewire/report-template-select.blade.php
 resources/views/livewire/oauth-clients.blade.php
 resources/views/livewire/location-scope-check.blade.php
 resources/views/livewire/category-edit-form.blade.php
@@ -6818,6 +6823,7 @@ app/Rules/ValidJson.php
 app/Rules/RegexEncrypted.php
 app/Rules/IPv4Encrypted.php
 app/Rules/BooleanEncrypted.php
+app/Rules/ExternalUrl.php
 app/Rules/IPv6Encrypted.php
 app/Rules/CssColor.php
 app/Helpers/IconHelper.php
@@ -6925,6 +6931,7 @@ app/Models/Labels/Tapes/Generic/GenericTape.php
 app/Models/Labels/Tapes/Generic/Continuous_Landscape_0_59in.php
 app/Models/Labels/Tapes/Dymo/LabelWriter.php
 app/Models/Labels/Tapes/Dymo/LabelWriter_2112283.php
+app/Models/Labels/Tapes/Dymo/LabelWriter_2112284.php
 app/Models/Labels/Tapes/Dymo/LabelWriter_11354.php
 app/Models/Labels/Tapes/Dymo/LabelWriter_1933081.php
 app/Models/Labels/Tapes/Dymo/LabelWriter_30252.php
@@ -7000,17 +7007,20 @@ app/Livewire/PersonalAccessTokens.php
 app/Livewire/LocationScopeCheck.php
 app/Livewire/AdminPersonalAccessTokens.php
 app/Livewire/OauthClients.php
+app/Livewire/ReportTemplateSelect.php
 app/Livewire/SlackSettingsForm.php
 app/Livewire/CategoryEditForm.php
 app/Livewire/Importer.php
+app/Actions/Companies/DestroyCompanyAction.php
 app/Actions/Permissions/NormalizePermissionsPayloadAction.php
 app/Actions/Permissions/PreserveUnauthorizedPrivilegedPermissionsAction.php
 app/Actions/CheckoutRequests/CreateCheckoutRequestAction.php
 app/Actions/CheckoutRequests/CancelCheckoutRequestAction.php
 app/Actions/Categories/DestroyCategoryAction.php
-app/Actions/Manufacturers/DeleteManufacturerAction.php
+app/Actions/Manufacturers/DestroyManufacturerAction.php
 app/Actions/Breadcrumbs/BuildAcceptanceBreadcrumbs.php
 app/Actions/Suppliers/DestroySupplierAction.php
+app/Actions/Acceptances/CreateCheckoutAcceptanceAction.php
 app/Jobs/Job.php
 app/Events/CheckoutableCheckedIn.php
 app/Events/CheckoutablesCheckedOutInBulk.php
@@ -7024,6 +7034,7 @@ app/Exceptions/AssetNotRequestable.php
 app/Exceptions/ItemStillHasAccessories.php
 app/Exceptions/ItemStillHasComponents.php
 app/Exceptions/ItemStillHasAssets.php
+app/Exceptions/ItemStillHasChildCompanies.php
 app/Exceptions/ItemStillHasConsumables.php
 app/Exceptions/CheckoutNotAllowed.php
 app/Exceptions/UserDoestExistException.php
@@ -7031,6 +7042,7 @@ app/Exceptions/ItemStillHasMaintenances.php
 app/Exceptions/ItemStillHasChildren.php
 app/Exceptions/ItemStillHasLicenses.php
 app/Exceptions/ItemStillHasAssetModels.php
+app/Exceptions/ItemStillHasUsers.php
 app/Notifications/FirstAdminNotification.php
 app/Notifications/CheckoutAssetNotification.php
 app/Notifications/WelcomeNotification.php
@@ -7149,6 +7161,7 @@ app/Http/Controllers/ViewAssetsController.php
 app/Http/Controllers/Consumables/ConsumablesController.php
 app/Http/Controllers/Consumables/ConsumableCheckoutController.php
 app/Http/Controllers/CompaniesController.php
+app/Http/Controllers/Reports/CustomComponentReportController.php
 app/Http/Controllers/ReportsController.php
 app/Http/Controllers/QrCodeController.php
 app/Http/Controllers/AssetModelsController.php
@@ -7165,6 +7178,7 @@ app/Http/Controllers/Controller.php
 app/Http/Controllers/Accessories/AccessoryCheckinController.php
 app/Http/Controllers/Accessories/AccessoryCheckoutController.php
 app/Http/Controllers/Accessories/AccessoriesController.php
+app/Http/Controllers/BulkCompaniesController.php
 app/Http/Controllers/DepreciationsController.php
 app/Http/Controllers/Assets/AssetsController.php
 app/Http/Controllers/Assets/AssetCheckinController.php
@@ -7249,6 +7263,7 @@ app/Http/Requests/UploadFileRequest.php
 app/Http/Requests/StoreNotificationSettings.php
 app/Http/Requests/StoreLabelSettings.php
 app/Http/Requests/Request.php
+app/Http/Requests/CustomComponentReportRequest.php
 app/Http/Requests/SettingsLdapRequest.php
 app/Http/Requests/SetupUserRequest.php
 app/Http/Requests/SettingsSamlRequest.php
@@ -7340,6 +7355,7 @@ tests/Unit/Mail/CheckoutAssetMailTest.php
 tests/Unit/DepreciationTest.php
 tests/Unit/AssetTest.php
 tests/Unit/Rules/CssColorTest.php
+tests/Unit/Rules/ExternalUrlTest.php
 tests/Unit/Helpers/HelperTest.php
 tests/Unit/Importer/AssetImportTest.php
 tests/Unit/CustomFieldTest.php
@@ -7347,8 +7363,10 @@ tests/Unit/DatabaseSslConfigurationTest.php
 tests/Unit/Models/LicenseTest.php
 tests/Unit/Models/AssetOrphanedAssignmentTest.php
 tests/Unit/Models/ReportTemplates/ReportTemplateParsingValuesTest.php
+tests/Unit/Models/UserCanReceiveFromCompanyTest.php
 tests/Unit/Models/Company/CompanyTest.php
 tests/Unit/Models/Company/GetIdForCurrentUserTest.php
+tests/Unit/Models/UserTotalCostTest.php
 tests/Unit/Models/Labels/DefaultLabelTest.php
 tests/Unit/Models/Labels/FieldOptionTest.php
 tests/Unit/Models/UserPendingAcceptanceItemsTest.php
@@ -7370,6 +7388,7 @@ tests/Unit/UserTest.php
 tests/Unit/MaintenanceTest.php
 tests/Unit/Actions/Permissions/PreserveUnauthorizedPrivilegedPermissionsActionTest.php
 tests/Unit/Actions/Permissions/NormalizePermissionsPayloadActionTest.php
+tests/Unit/Actions/Acceptances/CreateCheckoutAcceptanceActionTest.php
 tests/Unit/Labels/LabelTest.php
 tests/Unit/LdapTest.php
 tests/Unit/NotificationTest.php
@@ -7380,10 +7399,13 @@ tests/CreatesApplication.php
 tests/TestCase.php
 tests/Concerns/TestsFullMultipleCompaniesSupport.php
 tests/Concerns/TestsPermissionsRequirement.php
+tests/Feature/Companies/Api/CompanyHierarchyTest.php
 tests/Feature/Companies/Api/CreateCompaniesTest.php
+tests/Feature/Companies/Api/BulkSelectableTest.php
 tests/Feature/Companies/Api/IndexCompaniesTest.php
 tests/Feature/Companies/Api/DeleteCompaniesTest.php
 tests/Feature/Companies/Api/UpdateCompaniesTest.php
+tests/Feature/Companies/Ui/BulkDeleteCompaniesTest.php
 tests/Feature/Companies/Ui/ShowCompanyTest.php
 tests/Feature/Companies/Ui/CompanyIndexTest.php
 tests/Feature/Companies/Ui/CreateCompaniesTest.php
@@ -7399,6 +7421,7 @@ tests/Feature/Importing/Api/ImportConsumablesTest.php
 tests/Feature/Importing/Api/ImportAccessoriesTest.php
 tests/Feature/Importing/Api/ImportAssetModelsTest.php
 tests/Feature/Importing/Api/ImportUsersTest.php
+tests/Feature/Importing/Api/ImportOwnershipTest.php
 tests/Feature/Importing/Api/ImportUsersFmcsLocationTest.php
 tests/Feature/Importing/Api/ImportLocationsTest.php
 tests/Feature/Importing/Api/ImportComponentsTest.php
@@ -7417,6 +7440,7 @@ tests/Feature/AssetModels/Ui/IndexAssetModelsTest.php
 tests/Feature/AssetModels/Ui/UpdateAssetModelsTest.php
 tests/Feature/AssetModels/Ui/CreateAssetModelsTest.php
 tests/Feature/Modals/Ui/ShowModalsTest.php
+tests/Feature/Scim/CreateGroupWithMembersTest.php
 tests/Feature/Authentication/PersonalAccessTokenTwoFactorGuardTest.php
 tests/Feature/Authentication/LoginTest.php
 tests/Feature/Authentication/TwoFactorRateLimitTest.php
@@ -7468,6 +7492,7 @@ tests/Feature/Users/Ui/CloneUserTest.php
 tests/Feature/Users/Ui/UserCompanyMembershipTest.php
 tests/Feature/Users/Ui/EmailAssignedToUserTest.php
 tests/Feature/Users/Ui/ExportUsersTest.php
+tests/Feature/Users/Ui/FloaterModeGateTest.php
 tests/Feature/Users/Ui/ResendAcceptanceReminderTest.php
 tests/Feature/Users/Ui/UpdateUserTest.php
 tests/Feature/Users/Ui/BulkActions/BulkMergeUsersTest.php
@@ -7558,6 +7583,7 @@ tests/Feature/Assets/Api/AuditAssetTest.php
 tests/Feature/Assets/Api/AssetNotesTest.php
 tests/Feature/Assets/Api/AssetHistoryTest.php
 tests/Feature/Assets/Api/AssignedAssetsTest.php
+tests/Feature/Assets/Api/UploadedFilesInlineTest.php
 tests/Feature/Assets/Api/AssetFilesTest.php
 tests/Feature/Assets/Api/StoreAssetTest.php
 tests/Feature/Assets/Api/RequestableAssetTest.php
@@ -7616,6 +7642,7 @@ tests/Feature/Settings/ApiRequestFiltersTest.php
 tests/Feature/Livewire/ImporterTest.php
 tests/Feature/Livewire/PersonalAccessTokensTest.php
 tests/Feature/Livewire/CategoryEditFormTest.php
+tests/Feature/Livewire/ReportTemplateSelectTest.php
 tests/Feature/Suppliers/Api/DeleteSuppliersTest.php
 tests/Feature/Suppliers/Ui/CreateSupplierTest.php
 tests/Feature/Suppliers/Ui/UpdateSupplierTest.php
@@ -7668,6 +7695,7 @@ tests/Feature/Console/CheckinAndDeleteItemsTest.php
 tests/Feature/Console/SendAcceptanceReminderTest.php
 tests/Feature/Console/FixupAssignedToAssignedTypeTest.php
 tests/Feature/Console/Commands/PurgeEulaPDFTest.php
+tests/Feature/Console/Commands/PurgeCompaniesTest.php
 tests/Feature/Console/TestLocationsFmcsTest.php
 tests/Feature/Console/CleanIncorrectCheckoutAcceptancesTest.php
 tests/Feature/Console/CleanOldCheckoutRequestsTest.php
@@ -7692,7 +7720,8 @@ tests/Feature/Locations/Ui/ShowLocationTest.php
 tests/Feature/Reporting/SentReminderAuthorizationTest.php
 tests/Feature/Reporting/DeleteAcceptanceAuthorizationTest.php
 tests/Feature/Reporting/ActivityReportTest.php
-tests/Feature/Reporting/CustomReportTest.php
+tests/Feature/Reporting/Custom/CustomAssetReportTest.php
+tests/Feature/Reporting/Custom/CustomComponentReportTest.php
 tests/Feature/Reporting/AccessoryReportTest.php
 tests/Feature/Reporting/UnacceptedAssetReportTest.php
 tests/Feature/Maintenances/Api/MaintenanceTypesPaginationTest.php
@@ -7772,12 +7801,14 @@ database/migrations/2014_12_09_082500_add_fields_maintained_term_to_licenses.php
 database/migrations/2019_07_23_140906_add_show_assigned_assets_to_settings.php
 database/migrations/2026_05_18_094309_add_maintenance_types_and_tracking_fields.php
 database/migrations/2023_05_08_132921_increase_state_to_more_than_3.php
+database/migrations/2026_06_22_000001_add_parent_id_to_companies_table.php
 database/migrations/2017_01_25_063357_fix_utf8_custom_field_column_names.php
 database/migrations/2022_06_28_234539_add_username_index_to_users.php
 database/migrations/2023_07_14_004221_add_show_in_list_view_to_custom_fields.php
 database/migrations/2012_12_06_225945_migration_cartalyst_sentry_install_users_groups_pivot.php
 database/migrations/2020_02_04_172100_add_ad_append_domain_settings.php
 database/migrations/2013_11_19_062250_edit_location_id_asset_logs_table.php
+database/migrations/2026_06_30_000001_drop_company_name_unique_index.php
 database/migrations/2016_07_14_153609_add_ad_domain_to_settings.php
 database/migrations/2014_06_24_003011_add_suppliers.php
 database/migrations/2017_10_27_180947_denorm_asset_locations.php
@@ -7879,6 +7910,7 @@ database/migrations/2014_11_20_203007_add_username_to_user.php
 database/migrations/2016_03_11_185621_add_label_settings_to_settings.php
 database/migrations/2013_11_21_024531_remove_deployable_boolean_from_status_labels.php
 database/migrations/2016_12_27_212631_make_asset_assigned_to_polymorphic.php
+database/migrations/2026_07_01_000001_clear_unsafe_webhook_endpoints.php
 database/migrations/2022_03_10_175740_add_eula_to_action_logs.php
 database/migrations/2017_07_07_191533_add_login_text.php
 database/migrations/2024_10_31_212512_update_new_and_drop_old_barcode_settings.php
@@ -8020,6 +8052,7 @@ database/migrations/2013_11_13_075347_create_manufacturers_table.php
 database/migrations/2015_02_19_222322_add_logo_and_colors_to_settings.php
 database/migrations/2025_10_07_113331_add_url_to_maintenances.php
 database/migrations/2014_06_20_004847_make_asset_log_checkedout_to_nullable.php
+database/migrations/2026_04_28_001156_add_type_column_to_report_templates_table.php
 database/migrations/2018_04_02_150700_labels_display_model_name.php
 database/migrations/2018_10_19_154013_add_kits_models_table.php
 database/migrations/2012_12_06_225988_migration_cartalyst_sentry_install_throttle.php
