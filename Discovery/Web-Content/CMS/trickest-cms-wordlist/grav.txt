@@ -393,6 +393,7 @@ system/src/Grav/Common/Media/Interfaces/MediaInterface.php
 system/src/Grav/Common/Media/Interfaces/MediaPlayerInterface.php
 system/src/Grav/Common/Media/Interfaces/MediaFileInterface.php
 system/src/Grav/Common/Media/Interfaces/MediaLinkInterface.php
+system/src/Grav/Common/Media/MediaRouteUrls.php
 system/src/Grav/Common/Media/Traits/MediaTrait.php
 system/src/Grav/Common/Media/Traits/VideoMediaTrait.php
 system/src/Grav/Common/Media/Traits/ImageDecodingTrait.php
@@ -729,9 +730,11 @@ tests/unit/Grav/Common/Security/TwigContentDiagnosticsTest.php
 tests/unit/Grav/Common/Security/BlueprintExtendsProvenanceTest.php
 tests/unit/Grav/Common/BrowserTest.php
 tests/unit/Grav/Common/Data/GroupBlueprintSecurityTest.php
+tests/unit/Grav/Common/Data/ValidationLengthTest.php
 tests/unit/Grav/Common/Data/BlueprintTest.php
 tests/unit/Grav/Common/Language/LanguageCodesTest.php
 tests/unit/Grav/Common/Language/LanguageTest.php
+tests/unit/Grav/Common/Service/PagesServiceProviderTest.php
 tests/unit/Grav/Common/Service/SessionServiceProviderTest.php
 tests/unit/Grav/Common/Helpers/FileReaderTest.php
 tests/unit/Grav/Common/Helpers/ExcerptsTest.php
