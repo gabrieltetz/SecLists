@@ -1,3 +1,4 @@
+CONTRIBUTING.md
 modules/dashboard/ServiceProvider.php
 modules/dashboard/behaviors/dashcontroller/partials/_container.php
 modules/dashboard/behaviors/DashController.php
@@ -21,6 +22,7 @@ modules/dashboard/tests/widgets/DashTest.php
 modules/dashboard/tests/classes/ReportDataCacheHelperTest.php
 modules/dashboard/tests/classes/DashboardManagerTest.php
 modules/dashboard/tests/classes/ReportDataSourceBaseTest.php
+modules/dashboard/tests/classes/TrafficLoggerTest.php
 modules/dashboard/tests/classes/ReportPeriodCalculatorTest.php
 modules/dashboard/tests/classes/ReportQueryBuilderTest.php
 modules/dashboard/tests/classes/ReportFetchDataTest.php
@@ -220,22 +222,15 @@ modules/editor/vuecomponents/documentinfopopup/partials/_documentinfopopup.php
 modules/editor/vuecomponents/documentinfopopup/assets/js/documentinfopopup.js
 modules/editor/vuecomponents/EditorConflictResolver.php
 modules/editor/vuecomponents/application/partials/_application.php
-modules/editor/vuecomponents/application/assets/less/application.less
-modules/editor/vuecomponents/application/assets/less/_splash.less
 modules/editor/vuecomponents/application/assets/js/application.js
 modules/editor/vuecomponents/DocumentInfoPopup.php
 modules/editor/vuecomponents/navigator/partials/_navigator.php
-modules/editor/vuecomponents/navigator/assets/less/navigator.less
 modules/editor/vuecomponents/navigator/assets/js/navigator.js
 modules/editor/vuecomponents/Application.php
 modules/editor/classes/NewDocumentDescription.php
 modules/editor/classes/ExtensionManager.php
 modules/editor/classes/ApiHelpers.php
 modules/editor/classes/ExtensionBase.php
-modules/editor/assets/less/_layout.less
-modules/editor/assets/less/_document.less
-modules/editor/assets/less/_buttons.less
-modules/editor/assets/less/editor.less
 modules/editor/assets/js/editor.documenturi.js
 modules/editor/assets/js/editor.extension.documentcontroller.base.js
 modules/editor/assets/js/editor.timeoutpromise.js
@@ -304,6 +299,7 @@ modules/tailor/models/EntryRecord.php
 modules/tailor/models/StreamRecord.php
 modules/tailor/models/StructureRecord.php
 modules/tailor/models/PreviewToken.php
+modules/tailor/tests/behaviors/PreviewControllerTest.php
 modules/tailor/tests/fixtures/blueprints/october-test/sections/solo-basic.yaml
 modules/tailor/tests/fixtures/blueprints/october-test/sections/tree-basic.yaml
 modules/tailor/tests/fixtures/blueprints/october-test/sections/feed-basic.yaml
@@ -329,7 +325,9 @@ modules/tailor/tests/fixtures/blueprints/landing/blockbuilder/featurette.yaml
 modules/tailor/tests/fixtures/blueprints/landing/blockbuilder/common.yaml
 modules/tailor/tests/fixtures/blueprints/landing/blockbuilder.yaml
 modules/tailor/tests/fixtures/blueprints/landing/landing-page.yaml
+modules/tailor/tests/components/SubmissionDecoderTest.php
 modules/tailor/tests/components/SubmissionComponentTest.php
+modules/tailor/tests/models/EntryRecordTest.php
 modules/tailor/tests/controllers/EntriesTest.php
 modules/tailor/tests/database/EntriesFieldModelTest.php
 modules/tailor/tests/classes/BlueprintIndexerTest.php
@@ -492,6 +490,9 @@ modules/tailor/classes/relations/CustomFieldHasOneRelation.php
 modules/tailor/classes/BlueprintCollection.php
 modules/tailor/classes/SchemaBuilder.php
 modules/tailor/classes/PresenceVerifier.php
+modules/tailor/classes/contentdecoder/ImportDecoder.php
+modules/tailor/classes/contentdecoder/SubmissionDecoder.php
+modules/tailor/classes/contentdecoder/Decoder.php
 modules/tailor/classes/ComponentVariable.php
 modules/tailor/classes/ContentFieldBase.php
 modules/tailor/classes/RecordIndexer.php
@@ -778,6 +779,8 @@ modules/system/tests/fixtures/plugins/database/tester/updates/create_double_join
 modules/system/tests/fixtures/plugins/database/tester/blueprints/category.yaml
 modules/system/tests/fixtures/plugins/database/tester/blueprints/upload.yaml
 modules/system/tests/fixtures/plugins/database/tester/blueprints/contact.yaml
+modules/system/tests/fixtures/plugins/database/tester/blueprints/survey.yaml
+modules/system/tests/fixtures/plugins/database/tester/blueprints/note.yaml
 modules/system/tests/fixtures/plugins/database/tester/blueprints/author.yaml
 modules/system/tests/fixtures/plugins/database/tester/blueprints/post-content.yaml
 modules/system/tests/fixtures/plugins/database/tester/blueprints/post.yaml
@@ -825,6 +828,8 @@ modules/system/tests/classes/ResizeImagesTest.php
 modules/system/tests/classes/SiteManagerTest.php
 modules/system/tests/classes/ResizeImageItemTest.php
 modules/system/tests/classes/DependencyResolverTest.php
+modules/system/tests/classes/SettingsManagerTest.php
+modules/system/tests/classes/ManifestCacheTest.php
 modules/system/tests/classes/ChangelogWidgetTest.php
 modules/system/tests/classes/ExceptionHandlerTest.php
 modules/system/tests/classes/PluginManagerTest.php
@@ -2160,13 +2165,15 @@ modules/backend/models/UserPreferenceModel.php
 modules/backend/models/ImportModel.php
 modules/backend/models/EditorSetting.php
 modules/backend/models/UserThrottle.php
+modules/backend/models/EditorToolbar.php
 modules/backend/models/usergroup/columns.yaml
 modules/backend/models/usergroup/fields.yaml
+modules/backend/models/editortoolbar/columns.yaml
+modules/backend/models/editortoolbar/fields.yaml
 modules/backend/models/userrole/columns.yaml
 modules/backend/models/userrole/fields.yaml
 modules/backend/models/editorsetting/default_styles.less
 modules/backend/models/editorsetting/fields.yaml
-modules/backend/models/editorsetting/_toolbar_presets.php
 modules/backend/models/UserGroup.php
 modules/backend/models/importmodel/DecodesCsv.php
 modules/backend/models/importmodel/DecodesZip.php
@@ -2192,6 +2199,8 @@ modules/backend/tests/classes/WidgetManagerTest.php
 modules/backend/tests/classes/ControllerAjaxTest.php
 modules/backend/tests/classes/NavigationManagerTest.php
 modules/backend/tests/classes/RoleManagerTest.php
+modules/backend/tests/formwidgets/RelationQuickCreateTest.php
+modules/backend/tests/formwidgets/RepeaterJsonStoreTest.php
 modules/backend/helpers/Inspector.php
 modules/backend/helpers/Backend.php
 modules/backend/skins/Standard.php
@@ -2332,6 +2341,7 @@ modules/backend/database/migrations/2013_10_01_000002_Db_Backend_User_Groups.php
 modules/backend/database/migrations/2018_12_16_000011_Db_Backend_Add_Deleted_At.php
 modules/backend/database/migrations/2017_10_01_000010_Db_Backend_User_Roles.php
 modules/backend/database/migrations/2026_10_01_000018_Db_Add_Reset_Password_At.php
+modules/backend/database/migrations/2026_10_01_000019_Db_Backend_Editor_Toolbars.php
 modules/backend/database/migrations/2024_10_01_000017_Db_Migrate_v4_0_0.php
 modules/backend/database/migrations/2023_10_01_000014_Db_Add_User_Expired_Password.php
 modules/backend/database/migrations/2014_01_04_000005_Db_Backend_User_Preferences.php
@@ -2596,6 +2606,7 @@ modules/backend/vuecomponents/DocumentMarkdownEditor.php
 modules/backend/vuecomponents/tabs/partials/_tabs.php
 modules/backend/vuecomponents/tabs/assets/js/tabs.js
 modules/backend/classes/RoleManager.php
+modules/backend/classes/RichEditorManager.php
 modules/backend/classes/SettingsController.php
 modules/backend/classes/RolePermission.php
 modules/backend/classes/ListColumn.php
@@ -2869,8 +2880,12 @@ modules/backend/filterwidgets/date/partials/_date.php
 modules/backend/filterwidgets/date/partials/_item_between.php
 modules/backend/filterwidgets/date/assets/js/datefilter.js
 modules/backend/composer.json
+modules/backend/formwidgets/toolbarbuilder/partials/_toolbarbuilder.php
+modules/backend/formwidgets/toolbarbuilder/assets/js/toolbarbuilder.js
 modules/backend/formwidgets/richeditor/partials/_richeditor.php
+modules/backend/formwidgets/richeditor/assets/js/richeditor.api.js
 modules/backend/formwidgets/richeditor/assets/js/richeditor.js
+modules/backend/formwidgets/richeditor/assets/js/richeditor.engine.froala.js
 modules/backend/formwidgets/richeditor/assets/js/build-min.js
 modules/backend/formwidgets/nestedform/partials/_nestedform.php
 modules/backend/formwidgets/Sensitive.php
@@ -2943,6 +2958,7 @@ modules/backend/formwidgets/codeeditor/assets/vendor/ace/ext-searchbox.js
 modules/backend/formwidgets/codeeditor/assets/vendor/ace/theme-tomorrow_night_blue.js
 modules/backend/formwidgets/codeeditor/assets/vendor/ace/theme-tomorrow_night.js
 modules/backend/formwidgets/codeeditor/assets/vendor/emmet/emmet.js
+modules/backend/formwidgets/ToolbarBuilder.php
 modules/backend/formwidgets/DatePicker.php
 modules/backend/formwidgets/colorpicker/partials/_mode_preset.php
 modules/backend/formwidgets/colorpicker/partials/_mode_input.php
@@ -3111,13 +3127,16 @@ modules/cms/tests/fixtures/themes/test/partials/nesting/level2.htm
 modules/cms/tests/fixtures/themes/test/partials/override2/default.htm
 modules/cms/tests/fixtures/themes/test/partials/override2/items.htm
 modules/cms/tests/fixtures/themes/test/content/markdown-content.md
+modules/cms/tests/fixtures/themes/test/content/snippet-test.htm
 modules/cms/tests/fixtures/themes/test/content/text-content.txt
 modules/cms/tests/fixtures/themes/test/content/html-content.htm
+modules/cms/tests/fixtures/themes/test/content/link-test.htm
 modules/cms/tests/fixtures/themes/test/content/a/a-content.htm
 modules/cms/tests/fixtures/themes/test/content/page-content.htm
 modules/cms/tests/fixtures/themes/test/content/layout-content.txt
 modules/cms/tests/fixtures/themes/test/theme.yaml
 modules/cms/tests/fixtures/themes/test/lang/en.json
+modules/cms/tests/fixtures/themes/test/pages/ajax-capture-test.htm
 modules/cms/tests/fixtures/themes/test/pages/404.htm
 modules/cms/tests/fixtures/themes/test/pages/authors.htm
 modules/cms/tests/fixtures/themes/test/pages/code-namespaces-aliases.htm
@@ -3169,6 +3188,7 @@ modules/cms/tests/fixtures/reference/compound-markup-settings.htm
 modules/cms/tests/fixtures/reference/namespaces.php.stub
 modules/cms/tests/fixtures/reference/compound-markup.htm
 modules/cms/tests/components/TranslatableBagTest.php
+modules/cms/tests/components/SitePickerTest.php
 modules/cms/tests/models/ThemeSeedTest.php
 modules/cms/tests/helpers/CmsTest.php
 modules/cms/tests/helpers/FileTest.php
@@ -3182,6 +3202,7 @@ modules/cms/tests/classes/LangTest.php
 modules/cms/tests/classes/PageManagerTest.php
 modules/cms/tests/classes/CmsObjectTest.php
 modules/cms/tests/classes/ContentTranslatableTest.php
+modules/cms/tests/classes/ContentProcessingTest.php
 modules/cms/tests/classes/ControllerTest.php
 modules/cms/tests/classes/ThemeTest.php
 modules/cms/tests/classes/CmsExceptionTest.php
@@ -3533,6 +3554,7 @@ themes/demo/partials/site/nav-links.htm
 themes/demo/partials/site/how-its-made.htm
 themes/demo/partials/site/helpers/random-stock-image.htm
 themes/demo/partials/site/helpers/random-avatar-image.htm
+themes/demo/partials/site/error-illustration.htm
 themes/demo/partials/site/modals/password-dialog.htm
 themes/demo/partials/site/modals/alert-dialog.htm
 themes/demo/partials/site/modals/ajax-modal.htm
